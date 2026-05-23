@@ -219,39 +219,39 @@
             <div class="contact-content">
                 <div class="contact-info">
                     <div class="info-item">
-                        <div class="info-icon">📧</div>
-                        <h3>Email</h3>
-                        <p>tejareddy2311@gmail.com</p>
+                        <div class="info-icon">🎨</div>
+                        <h3>Get In Touch</h3>
+                        <p>Fill out the form and I'll get back to you as soon as possible!</p>
                     </div>
                     <div class="info-item">
-                        <div class="info-icon">📱</div>
-                        <h3>Phone</h3>
-                        <p>+1 (210) 380-0302</p>
+                        <div class="info-icon">📚</div>
+                        <h3>Art Classes</h3>
+                        <p>Offering personalized instruction in various art forms for all skill levels.</p>
                     </div>
                     <div class="info-item">
-                        <div class="info-icon">📍</div>
-                        <h3>Location</h3>
-                        <p>San Antonio, Texas</p>
+                        <div class="info-icon">⭐</div>
+                        <h3>Why Choose Us</h3>
+                        <p>Professional guidance, flexible schedules, and a passion for teaching art.</p>
                     </div>
                     <div class="info-item">
                         <div class="info-icon">🕐</div>
                         <h3>Class Hours</h3>
-                        <p>Mon-Sat: 9:00 AM - 6:00 PM</p>
+                        <p>Flexible scheduling available - contact for details</p>
                     </div>
                 </div>
                 
-                <form class="contact-form">
+                <form class="contact-form" action="https://formspree.io/f/xanyrgko" method="POST">
                     <div class="form-group">
-                        <input type="text" placeholder="Your Name" required>
+                        <input type="text" name="name" placeholder="Your Name" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" placeholder="Your Email" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
                     </div>
                     <div class="form-group">
-                        <input type="tel" placeholder="Your Phone">
+                        <input type="tel" name="phone" placeholder="Your Phone">
                     </div>
                     <div class="form-group">
-                        <select>
+                        <select name="art-form">
                             <option value="">Select Art Form</option>
                             <option value="pencil">Pencil Drawing</option>
                             <option value="watercolor">Watercolor Painting</option>
@@ -262,7 +262,7 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <textarea placeholder="Your Message" rows="5"></textarea>
+                        <textarea name="message" placeholder="Your Message" rows="5"></textarea>
                     </div>
                     <button type="submit" class="submit-button">Send Message</button>
                 </form>

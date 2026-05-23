@@ -132,27 +132,58 @@ document.querySelectorAll('.stat-item').forEach(stat => {
     statsObserver.observe(stat);
 });
 
-// Form submission handler
+// Form submission handler with Formspree
 const contactForm = document.querySelector('.contact-form');
 
-contactForm.addEventListener('submit', (e) => {
+contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     
-    // Get form data
-    const formData = new FormData(contactForm);
-    
-    // Show success message
     const submitButton = contactForm.querySelector('.submit-button');
     const originalText = submitButton.textContent;
-    submitButton.textContent = 'Message Sent! ✓';
-    submitButton.style.background = 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)';
     
-    // Reset form
-    setTimeout(() => {
-        contactForm.reset();
-        submitButton.textContent = originalText;
-        submitButton.style.background = '';
-    }, 3000);
+    // Show loading state
+    submitButton.textContent = 'Sending...';
+    submitButton.disabled = true;
+    
+    try {
+        // Submit form to Formspree
+        const response = await fetch(contactForm.action, {
+            method: 'POST',
+            body: new FormData(contactForm),
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+        
+        if (response.ok) {
+            // Show success message
+            submitButton.textContent = 'Message Sent! ✓';
+            submitButton.style.background = 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)';
+            
+            // Reset form
+            contactForm.reset();
+            
+            // Reset button after 3 seconds
+            setTimeout(() => {
+                submitButton.textContent = originalText;
+                submitButton.style.background = '';
+                submitButton.disabled = false;
+            }, 3000);
+        } else {
+            throw new Error('Form submission failed');
+        }
+    } catch (error) {
+        // Show error message
+        submitButton.textContent = 'Error! Try Again';
+        submitButton.style.background = 'linear-gradient(135deg, #e74c3c 0%, #c0392b 100%)';
+        
+        // Reset button after 3 seconds
+        setTimeout(() => {
+            submitButton.textContent = originalText;
+            submitButton.style.background = '';
+            submitButton.disabled = false;
+        }, 3000);
+    }
 });
 
 // Add parallax effect to hero section

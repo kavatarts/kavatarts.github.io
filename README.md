@@ -175,10 +175,5 @@ This website is created for Kavat Art Studio. All rights reserved.
 
 ---
 
-**Contact Information:**
-- **Email:** tejareddy2311@gmail.com
-- **Phone:** 210-380-0302
-- **Location:** San Antonio, Texas
-- **Owner:** Keerthi Tajaswini
-
+**Owner:** Keerthi Tajaswini
 **Last Updated:** May 2026

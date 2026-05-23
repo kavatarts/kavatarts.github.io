@@ -14,7 +14,7 @@ Go to: https://github.com/signup
 
 ### Step 2: Create New Repository
 1. Go to: https://github.com/new
-2. Repository name: `kavat-art-studio`
+2. Repository name: `kavatarts`
 3. Description: `Kavat Art Studio - Professional Art Teaching Website`
 4. Make it **Public** ✅
 5. **DO NOT** check "Add a README file" (we already have one)
@@ -25,7 +25,7 @@ Copy and paste these commands in your terminal:
 
 ```bash
 # Set your GitHub username (replace YOUR-USERNAME)
-git remote add origin https://github.com/YOUR-USERNAME/kavat-art-studio.git
+git remote add origin https://github.com/YOUR-USERNAME/kavatarts.git
 
 # Push to GitHub
 git branch -M main
@@ -34,7 +34,7 @@ git push -u origin main
 
 **Example:** If your GitHub username is "keerthi123":
 ```bash
-git remote add origin https://github.com/keerthi123/kavat-art-studio.git
+git remote add origin https://github.com/keerthi123/kavatarts.git
 git branch -M main
 git push -u origin main
 ```
@@ -50,7 +50,7 @@ git push -u origin main
 ### Step 5: Visit Your Website! 🎉
 Your website will be live at:
 ```
-https://YOUR-USERNAME.github.io/kavat-art-studio/
+https://YOUR-USERNAME.github.io/kavatarts/
 ```
 
 ---
@@ -166,6 +166,3 @@ Good luck with your art teaching business! 🎨
 
 **Kavat Art Studio**
 by Keerthi Tajaswini
-San Antonio, Texas
-📧 tejareddy2311@gmail.com
-📱 210-380-0302
