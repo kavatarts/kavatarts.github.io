@@ -201,7 +201,7 @@ In Formspree dashboard:
 
 ## Quick Reference
 
-**Your Form Endpoint:** `https://formspree.io/f/xanyrgko`
+**Your Form Endpoint:** `https://formspree.io/f/f12d7622-cad3-4ac3-848a-38a9c849ca2d`
 **Monthly Limit:** 50 submissions (FREE)
 **Setup Required:** Email confirmation (one-time)
 
