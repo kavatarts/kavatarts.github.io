@@ -132,7 +132,7 @@ document.querySelectorAll('.stat-item').forEach(stat => {
     statsObserver.observe(stat);
 });
 
-// Form submission handler with Formspree
+// Form submission handler with Web3Forms
 const contactForm = document.querySelector('.contact-form');
 
 contactForm.addEventListener('submit', async (e) => {
@@ -146,16 +146,16 @@ contactForm.addEventListener('submit', async (e) => {
     submitButton.disabled = true;
     
     try {
-        // Submit form to Formspree
-        const response = await fetch(contactForm.action, {
+        // Submit form to Web3Forms
+        const formData = new FormData(contactForm);
+        const response = await fetch('https://api.web3forms.com/submit', {
             method: 'POST',
-            body: new FormData(contactForm),
-            headers: {
-                'Accept': 'application/json'
-            }
+            body: formData
         });
         
-        if (response.ok) {
+        const data = await response.json();
+        
+        if (data.success) {
             // Show success message
             submitButton.textContent = 'Message Sent! ✓';
             submitButton.style.background = 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)';
@@ -170,7 +170,7 @@ contactForm.addEventListener('submit', async (e) => {
                 submitButton.disabled = false;
             }, 3000);
         } else {
-            throw new Error('Form submission failed');
+            throw new Error(data.message || 'Form submission failed');
         }
     } catch (error) {
         // Show error message

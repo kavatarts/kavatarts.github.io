@@ -240,7 +240,8 @@
                     </div>
                 </div>
                 
-                <form class="contact-form" action="https://formspree.io/f/f12d7622-cad3-4ac3-848a-38a9c849ca2d" method="POST">
+                <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="f12d7622-cad3-4ac3-848a-38a9c849ca2d">
                     <div class="form-group">
                         <input type="text" name="name" placeholder="Your Name" required>
                     </div>
@@ -251,18 +252,18 @@
                         <input type="tel" name="phone" placeholder="Your Phone">
                     </div>
                     <div class="form-group">
-                        <select name="art-form">
+                        <select name="art_form">
                             <option value="">Select Art Form</option>
-                            <option value="pencil">Pencil Drawing</option>
-                            <option value="watercolor">Watercolor Painting</option>
-                            <option value="charcoal">Charcoal Drawing</option>
-                            <option value="acrylic">Acrylic Painting</option>
-                            <option value="colored">Colored Pencils</option>
-                            <option value="sketching">Sketching</option>
+                            <option value="Pencil Drawing">Pencil Drawing</option>
+                            <option value="Watercolor Painting">Watercolor Painting</option>
+                            <option value="Charcoal Drawing">Charcoal Drawing</option>
+                            <option value="Acrylic Painting">Acrylic Painting</option>
+                            <option value="Colored Pencils">Colored Pencils</option>
+                            <option value="Sketching">Sketching</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <textarea name="message" placeholder="Your Message" rows="5"></textarea>
+                        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
                     </div>
                     <button type="submit" class="submit-button">Send Message</button>
                 </form>
